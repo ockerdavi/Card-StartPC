@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Digital - StartPC</title>
+    <style>
+        :root {
+            --bg-page: #060D1A; /* Fundo escuro atrás do cartão */
+            --bg-card: #0A192F; /* Fundo do cartão baseado no logo */
+            --accent: #00D2FF;  /* Ciano brilhante do botão power */
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Estrutura do Cartão */
+        .digital-card {
+            background-color: var(--bg-card);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            padding: 40px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 210, 255, 0.1);
+            border: 1px solid rgba(0, 210, 255, 0.15);
+        }
+
+        /* Logótipo */
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo-container img {
+            width: 180px;
+            height: auto;
+            border-radius: 10px;
+            /* Pequeno brilho em torno da imagem para fundir com o fundo */
+            filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.2)); 
+        }
+
+        /* Informações Pessoais / Empresa */
+        .profile-name {
+            color: var(--text-main);
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-title {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Botões de Contacto */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito Hover nos botões */
+        .btn-link:hover {
+            background-color: rgba(0, 210, 255, 0.1);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2);
+        }
+
+        /* Ícones SVG embutidos */
+        .btn-link svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--accent);
+        }
+
+        /* Rodapé do Cartão */
+        .card-footer {
+            margin-top: 35px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="digital-card">
+        
+        <div class="logo-container">
+            <img src="1949ab06-46ca-42d4-b7d7-7086b6b49322-removebg-preview.png" alt="StartPC Logo">
+        </div>
+
+        <h1 class="profile-name">StartPC</h1>
+        <p class="profile-title">Assistência Técnica</p>
+
+        <div class="links-container">
+            <a href="https://wa.me/5548992057061" target="_blank" class="btn-link">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.244 8.477 3.508 2.266 2.264 3.507 5.274 3.507 8.474-.003 6.657-5.34 11.997-11.953 11.997-2.003-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.528 2.022 14.056.992 11.433.992c-5.436 0-9.86 4.37-9.864 9.8 0 1.745.474 3.447 1.373 4.938L1.97 21.03l5.677-1.476zM16.71 14.93c-.272-.137-1.611-.795-1.86-.884-.25-.089-.432-.136-.614.137-.182.273-.705.884-.863 1.066-.159.182-.318.206-.59.069-.272-.137-1.15-.424-2.19-1.354-.809-.722-1.354-1.616-1.513-1.89-.159-.273-.017-.42.12-.557.123-.124.272-.317.409-.475.137-.159.182-.272.272-.456.091-.182.046-.341-.023-.478-.069-.137-.614-1.477-.84-2.02-.221-.534-.443-.463-.614-.472-.159-.008-.341-.01-.523-.01s-.477.069-.727.342c-.25.273-.954.933-.954 2.273s.977 2.632 1.114 2.815c.137.182 1.922 2.934 4.66 4.113.65.28 1.157.448 1.553.573.654.208 1.248.179 1.717.11.522-.078 1.611-.659 1.839-1.294.228-.635.228-1.181.159-1.294-.069-.115-.25-.183-.522-.32z"/></svg>
+                Falar no WhatsApp
+            </a>
+
+            <a href="index.html" class="btn-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Visitar Website
+            </a>
+
+            <a href="https://maps.app.goo.gl/hPKK9zaDLnURnboC6" target="_blank" class="btn-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Biguaçu e região
+            </a>
+        </div>
+
+        <div class="card-footer">
+            © 2026 StartPC - Assistência Técnica.
+        </div>
+
+    </div>
+
+</body>
+</html>
